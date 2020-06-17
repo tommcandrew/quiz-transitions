@@ -24,7 +24,8 @@ const App = () => {
     } else {
       setBoxAItem(boxAItem + 2);
     }
-  }, [currentBox, numChanges, boxAItem, boxBItem]);
+    //eslint-disable-next-line
+  }, [currentBox]);
 
   const handleComplete = () => {
     setSelectedOption({});
