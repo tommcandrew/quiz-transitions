@@ -10,8 +10,8 @@ const App = () => {
   const [boxAItem, setBoxAItem] = useState(0);
   const [boxBItem, setBoxBItem] = useState(1);
   const [selectedOption, setSelectedOption] = useState({});
-  const [correct, setCorrect] = useState(null);
-  const [finished, setFinished] = useState(false);
+  const [, setCorrect] = useState(null);
+  const [, setFinished] = useState(false);
   const [score, setScore] = useState(0);
 
   useEffect(() => {
@@ -24,7 +24,7 @@ const App = () => {
     } else {
       setBoxAItem(boxAItem + 2);
     }
-  }, [currentBox]);
+  }, [currentBox, numChanges, boxAItem, boxBItem]);
 
   const handleComplete = () => {
     setSelectedOption({});
